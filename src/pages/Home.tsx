@@ -37,22 +37,20 @@ export const Home = () => {
 							<Typewriter
 								onInit={(typewriter) => {
 									typewriter.typeString(language === 'es' ? textsEnglish.pages.home.subtitles[0] : textsPortuguese.pages.home.subtitles[0])
-										.pauseFor(2500)
+										.pauseFor(1500)
 										.start()
 										.deleteAll()
 									typewriter.typeString(language === 'es' ? textsEnglish.pages.home.subtitles[1] : textsPortuguese.pages.home.subtitles[1])
-										.pauseFor(2500)
+										.pauseFor(1500)
 										.start()
 										.deleteAll()
-									typewriter.typeString(language === 'es' ? textsEnglish.pages.home.subtitles[1] : textsPortuguese.pages.home.subtitles[1])
-										.pauseFor(2500)
+									typewriter.typeString(language === 'es' ? textsEnglish.pages.home.subtitles[2] : textsPortuguese.pages.home.subtitles[2])
+										.pauseFor(1500)
 										.start()
 										.deleteAll()
 									typewriter.typeString(language === 'es' ? textsEnglish.pages.home.subtitles[3] : textsPortuguese.pages.home.subtitles[3])
-										.pauseFor(2500)
+										.pauseFor(1500)
 										.start()
-
-
 								}}
 							/>
 						</h1>
