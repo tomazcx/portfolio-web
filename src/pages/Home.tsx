@@ -4,13 +4,12 @@ import {useEffect, useState} from "react";
 import {textsEnglish} from "../assets/texts/textsEnglish";
 import {textsPortuguese} from "../assets/texts/textsPortuguese";
 import {useLanguage} from "../hooks/useLanguage";
+import {motion as m} from "framer-motion";
 
 export const Home = () => {
 
 	const [mouseYPos, setMousePos] = useState(0);
-	const {getLanguage} = useLanguage()
-	const language = getLanguage()
-
+	const {language} = useLanguage('es')
 
 	useEffect(() => {
 		const handleMouseMove = (event: MouseEvent) => {
@@ -28,7 +27,12 @@ export const Home = () => {
 	}, []);
 
 	return (
-		<main className="h-screen lg:h-auto flex flex-col justify-between">
+		<m.main
+			initial={{opacity: 0}}
+			animate={{opacity: 1}}
+			transition={{duration: 0.8}}
+			exit={{opacity: 0}}
+			className="flex flex-col flex-1 justify-between">
 			<section className="lg:px-48 lg:py-12 px-12 ">
 				<article className="flex justify-between flex-col lg:text-left text-center gap-14  md:gap-36 ">
 					<div className="flex flex-col gap-12">
@@ -67,7 +71,7 @@ export const Home = () => {
 
 			</section>
 
-			<Wavify className="w-screen lg:absolute lg:bottom-0 " fill="#315EFF" amplitude={mouseYPos / 45 + 20} speed={0.5} />
-		</main >
+			<Wavify className="w-screen relative bottom-0 " fill="#315EFF" amplitude={mouseYPos / 45 + 20} speed={0.5} />
+		</m.main >
 	)
 }

@@ -1,20 +1,24 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 
-export const useLanguage = () => {
+export const useLanguage = (initial: string) => {
 
-	const [language, setLanguage] = useState(localStorage.getItem('lang') ?? 'es')
+	const [language, setLanguage] = useState(() => {
 
+		if (typeof window !== 'undefined') {
+			const saved = window.localStorage.getItem('lang')
+			if (saved) {
+				return saved
+			}
+			return 'es'
+		}
 
-	const setLanguageLocalStorage = (lang: string) => {
-		localStorage.setItem('lang', lang)
-		setLanguage(lang)
-	}
+		return initial
+	})
 
-	const getLanguage = () => {
-		return localStorage.getItem('lang') ?? 'es'
-	}
+	useEffect(() => {
+		window.localStorage.setItem('lang', language)
+	}, [language])
 
-
-	return {setLanguageLocalStorage, getLanguage}
+	return {setLanguage, language}
 
 }

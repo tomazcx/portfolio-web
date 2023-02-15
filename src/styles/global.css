@@ -6,3 +6,9 @@
 body{
 	overflow-x: hidden;
 }
+
+.marquee{
+	gap:8rem;
+}
+
+

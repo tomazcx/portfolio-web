@@ -14,6 +14,16 @@ module.exports = {
 				},
 				background: '#1A1A1A',
 				white: '#F0F0F0'
+			},
+			keyframes: {
+				show: {
+					'0%': {transform: 'translateX(100%)'},
+					'100%': {transform: 'translateX(0%)'}
+				},
+
+			},
+			animation: {
+				'sidebar': 'show .3s ease'
 			}
 		},
 	},

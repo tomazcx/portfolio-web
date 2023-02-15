@@ -2,12 +2,10 @@ import {List, X} from "phosphor-react"
 import {useLanguage} from "../../hooks/useLanguage"
 import {LinkHeader} from "../LinkHeader"
 import * as Dialog from '@radix-ui/react-dialog'
-import {SelectLanguage} from "../SelectLanguage"
 
 export const Header = () => {
 
-	const {setLanguageLocalStorage, getLanguage} = useLanguage()
-	const language = getLanguage()
+	const {setLanguage, language} = useLanguage('es')
 
 	const pages = [
 		{
@@ -32,11 +30,16 @@ export const Header = () => {
 		},
 	]
 
+	const handleChangeLanguage = (value: string) => {
+		setLanguage(value)
+		window.location.reload()
+	}
+
 	return (
 		<header className="flex justify-end lg:justify-between items-center px-12 lg:px-48 py-12">
 			<div className="lg:flex lg:gap-8 lg:font-bold hidden" >
 				<label htmlFor="lang">{language === 'es' ? 'Select a language' : 'Selecione uma linguagem'}</label>
-				<select id="lang" defaultValue={language} name="lang" onChange={(e) => setLanguageLocalStorage(e.target.value)} className="bg-transparent cursor-pointer">
+				<select id="lang" defaultValue={language} name="lang" onChange={(e) => handleChangeLanguage(e.target.value)} className="bg-transparent cursor-pointer">
 					<option value="es">es</option>
 					<option value="pt-br">pt-br</option>
 				</select>
@@ -53,12 +56,12 @@ export const Header = () => {
 				</Dialog.Trigger>
 				<Dialog.Portal>
 					<Dialog.Overlay className="bg-black/20 fixed inset-0 h-full w-full" />
-					<Dialog.Content className="bg-background/95 p-6 items-center pt-12 flex flex-col gap-16 top-0 right-0 fixed w-3/5 h-screen max-w-[1200px]">
+					<Dialog.Content className="bg-background/95 p-6 items-center pt-12 flex flex-col gap-16 top-0 right-0 fixed w-3/5 h-screen max-w-[1200px] animate-sidebar">
 						<div className="flex flex-col gap-8">
-							<Dialog.Close className="flex justify-end w-full"><X size={28} /></Dialog.Close>
+							<Dialog.Close className="flex justify-end w-full"><X size={28} className="hover:text-blue-500 transition-colors action:text-blue-600" /></Dialog.Close>
 							<div className="flex gap-4 text-sm">
 								<label htmlFor="lang">{language === 'es' ? 'Select a language' : 'Selecione uma linguagem'}</label>
-								<select id="lang" defaultValue={language} name="lang" onChange={(e) => setLanguageLocalStorage(e.target.value)} className="bg-transparent cursor-pointer">
+								<select id="lang" defaultValue={language} name="lang" onChange={(e) => handleChangeLanguage(e.target.value)} className="bg-transparent cursor-pointer">
 									<option value="es">es</option>
 									<option value="pt-br">pt-br</option>
 								</select>
