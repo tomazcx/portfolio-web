@@ -13,7 +13,10 @@ module.exports = {
 					600: '#2E4AAB'
 				},
 				background: '#1A1A1A',
-				white: '#F0F0F0'
+				white: '#F0F0F0',
+				gray: {
+					700: '#222222'
+				}
 			},
 			keyframes: {
 				show: {

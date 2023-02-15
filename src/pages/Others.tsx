@@ -10,6 +10,7 @@ import 'swiper/css/navigation'
 import Marquee from 'react-fast-marquee'
 import {tecs} from "../assets/images/logos/others"
 import {Project} from "../components/Project"
+import {TitlePage} from "../components/TitlePage"
 
 export const Others = () => {
 
@@ -24,22 +25,12 @@ export const Others = () => {
 			transition={{duration: 0.8}}
 			exit={{opacity: 0}}
 			className="lg:px-48 px-4 flex flex-col gap-36 justify-between">
-			<div className="flex flex-col gap-12">
-				<div className="flex justify-between items-center overflow-hidden">
-					<h1 className="text-blue-400 text-4xl lg:text-7xl font-bold">
-						<Typewriter
-							onInit={(typewriter) => {
-								typewriter.typeString('Others')
-									.start()
-							}
-							}
-						/>
-					</h1>
-					<ContinueLink text="Contact" href="/contact" />
-				</div>
-				<p>{language === 'es' ? textsEnglish.pages.others.description : textsPortuguese.pages.others.description} </p>
-			</div>
-
+			<TitlePage
+				title="Others"
+				description={language === 'es' ? textsEnglish.pages.others.description : textsPortuguese.pages.others.description}
+				textContinue="Contact"
+				pathContinue="/contact"
+			/>
 			<Marquee
 				gradient={false}
 				speed={150}

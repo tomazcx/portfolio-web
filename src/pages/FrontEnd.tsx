@@ -1,15 +1,14 @@
 import {textsEnglish} from "../assets/texts/textsEnglish"
 import {textsPortuguese} from "../assets/texts/textsPortuguese"
-import {ContinueLink} from "../components/ContinueLink"
 import {useLanguage} from "../hooks/useLanguage"
 import {motion as m} from "framer-motion"
 import {useEffect, useRef, useState} from "react"
-import Typewriter from "typewriter-effect"
 import 'swiper/css'
 import 'swiper/css/navigation'
 import Marquee from 'react-fast-marquee'
 import {tecs} from "../assets/images/logos/front-end"
 import {Project} from "../components/Project"
+import {TitlePage} from "../components/TitlePage"
 
 export const FrontEnd = () => {
 
@@ -24,22 +23,12 @@ export const FrontEnd = () => {
 			transition={{duration: 0.8}}
 			exit={{opacity: 0}}
 			className="lg:px-48 px-4 flex flex-col gap-36 justify-between">
-			<div className="flex flex-col gap-12">
-				<div className="flex justify-between items-center overflow-hidden">
-					<h1 className="text-blue-400 text-4xl lg:text-7xl font-bold">
-						<Typewriter
-							onInit={(typewriter) => {
-								typewriter.typeString('Front-end')
-									.start()
-							}
-							}
-						/>
-					</h1>
-					<ContinueLink text="Back-end" href="/back-end" />
-				</div>
-				<p>{language === 'es' ? textsEnglish.pages.frontEnd.description : textsPortuguese.pages.frontEnd.description} </p>
-			</div>
-
+			<TitlePage
+				title="Front-end"
+				description={language === 'es' ? textsEnglish.pages.frontEnd.description : textsPortuguese.pages.frontEnd.description}
+				textContinue="Back-end"
+				pathContinue="/back-end"
+			/>
 			<Marquee
 				gradient={false}
 				speed={150}
