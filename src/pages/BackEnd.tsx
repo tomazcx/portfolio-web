@@ -53,7 +53,7 @@ export const BackEnd = () => {
 					<span className="text-4xl font-bold">{tecs[selected].name}</span>
 					<p className="lg:grid lg:grid-cols-12 flex flex-col gap-12 items-center lg:w-10/12">
 						<img src={tecs[selected].img} className="col-span-6 w-[200px] h-auto lg:w-[55%]" alt={`${tecs[selected].name} logo`} />
-						<p className="col-span-6 leading-8">{language === 'es' ? tecs[selected].descriptionEnglish : tecs[selected].descriptionPortuguese}</p>
+						<p className="col-span-6 leading-8 text-center lg:text-left">{language === 'es' ? tecs[selected].descriptionEnglish : tecs[selected].descriptionPortuguese}</p>
 					</p>
 					<p className="w-full text-center lg:text-left font-bold text-2xl">{language === 'es' ? textsEnglish.pages.backEnd.titleProjects : textsPortuguese.pages.backEnd.titleProjects} <span className="text-blue-400">{tecs[selected].name}</span>: </p>
 					<div className="flex flex-col gap-12 w-full">

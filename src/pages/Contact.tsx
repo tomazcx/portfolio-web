@@ -24,36 +24,36 @@ export const Contact = () => {
 			className="lg:px-48 px-4 flex flex-col gap-36 justify-between">
 			<section className='flex flex-col gap-32'>
 				<TitlePage
-					title="About me"
-					description={language === 'es' ? textsEnglish.pages.others.description : textsPortuguese.pages.others.description}
+					title={language === 'es' ? textsEnglish.pages.contact.title : textsPortuguese.pages.contact.title}
+					description={language === 'es' ? textsEnglish.pages.contact.subtitle : textsPortuguese.pages.contact.subtitle}
 				/>
-				<div className="grid grid-cols-12 gap-12 items-center">
+				<div className="lg:grid lg:grid-cols-12 flex flex-col gap-12 items-center">
 					<img src={picture} alt="" className="col-span-6 w-[60%] h-auto rounded-full" />
-					<p className='col-span-6 text-lg leading-8'>My name is Tomaz Xavier and I’m a 18 year old that studies everyday in order to become a professional web developer.  Formed as a computer technician at IFC Campus Videira, I’ve been learning about the most modern technologies in the market with the objective of getting my first job as a programmer.</p>
+					<p className='col-span-6 text-lg leading-8 text-center lg:text-left'>{language === 'es' ? textsEnglish.pages.contact.description : textsPortuguese.pages.contact.description}</p>
 				</div>
 
 			</section>
 			<section className='flex flex-col gap-32'>
 
 				<TitlePage
-					title="Contact"
-					description={language === 'es' ? textsEnglish.pages.others.description : textsPortuguese.pages.others.description}
+					title={language === 'es' ? textsEnglish.pages.contact.titleTwo : textsPortuguese.pages.contact.titleTwo}
+					description={language === 'es' ? textsEnglish.pages.contact.subtitleTwo : textsPortuguese.pages.contact.subtitleTwo}
 				/>
-				<div className="flex gap-20 items-center justify-center">
+				<div className="flex gap-8 lg:gap-20 items-center justify-center">
 					<SocialMedia logo={<InstagramLogo size={48} />} text="Instagram" href="https://instagram.com/tomazcx" target={'_blank'} />
 					<SocialMedia logo={<TwitterLogo size={48} />} text="Twitter" href="https://twitter.com/tomazcx" target={'_blank'} />
 					<SocialMedia logo={<LinkedinLogo size={48} />} text="Linkedin" href="https://linkedin.com/in/tomazcx/" target={'_blank'} />
 					<SocialMedia logo={<GithubLogo size={48} />} text="Github" href="https://github.com/tomazcx" target={'_blank'} />
 				</div>
 
-				<strong className='text-center mx-auto text-3xl'>Send me an email</strong>
+				<strong className='text-center mx-auto text-2xl lg:text-3xl'>{language === 'es' ? textsEnglish.pages.contact.form.title : textsPortuguese.pages.contact.form.title}</strong>
 
 				<form className='flex flex-col gap-6 items-end'>
-					<Input name="name" id="name" label="Name" type={"text"} register={register} />
-					<Input name="email" id="email" label="Email" type={"email"} register={register} />
-					<Input name="subject" id="subject" label="Subject" type={"text"} register={register} />
-					<Textarea name="content" id="content" label="Content" register={register} rows={10} cols={30} />
-					<button className='bg-blue-400 transition-colors hover:bg-blue-500 active:bg-blue-600 rounded-xl px-12 py-2 font-bold w-[15rem]'>Send</button>
+					<Input name="name" id="name" label={language === 'es' ? textsEnglish.pages.contact.form.name : textsPortuguese.pages.contact.form.name} type={"text"} register={register} />
+					<Input name="email" id="email" label={language === 'es' ? textsEnglish.pages.contact.form.email : textsPortuguese.pages.contact.form.email} type={"email"} register={register} />
+					<Input name="subject" id="subject" label={language === 'es' ? textsEnglish.pages.contact.form.subject : textsPortuguese.pages.contact.form.subject} type={"text"} register={register} />
+					<Textarea name="content" id="content" label={language === 'es' ? textsEnglish.pages.contact.form.content : textsPortuguese.pages.contact.form.content} register={register} rows={10} cols={30} />
+					<button className='bg-blue-400 transition-colors hover:bg-blue-500 active:bg-blue-600 rounded-xl px-12 py-2 font-bold w-full lg:w-[15rem]'>{language === 'es' ? textsEnglish.pages.contact.form.send : textsPortuguese.pages.contact.form.send}</button>
 				</form>
 			</section>
 

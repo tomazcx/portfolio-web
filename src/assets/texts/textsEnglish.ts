@@ -33,7 +33,21 @@ export const textsEnglish = {
 			continueButton: 'Contact',
 			titleProjects: 'My projects using',
 			seeMore: 'See more at'
-
+		},
+		contact: {
+			title: 'About me',
+			subtitle: 'Read a little bit more about me and get to know how we can get in contact',
+			description: "My name is Tomaz Xavier and I’m a 18 year old that studies everyday in order to become a professional web developer.  Formed as a computer technician at IFC Campus Videira, I’ve been learning about the most modern technologies in the market with the objective of getting my first job as a programmer.",
+			titleTwo: 'Contact',
+			subtitleTwo: 'We can talk in any of the social medias above, or you can send me an email right now!',
+			form: {
+				title: 'Send me an email',
+				name: 'Name',
+				email: 'Your email',
+				subject: 'Subject',
+				content: 'Content',
+				send: 'Send'
+			}
 		}
 
 	}
