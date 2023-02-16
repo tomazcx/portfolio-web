@@ -1,4 +1,11 @@
 export const textsEnglish = {
+	components: {
+		project: {
+			title: 'Title:',
+			description: 'Description:',
+			tags: 'Technologies used:'
+		},
+	},
 	pages: {
 		home: {
 			title: 'Hello! I am',
@@ -8,15 +15,25 @@ export const textsEnglish = {
 		},
 		frontEnd: {
 			description: 'Explore the technologies that I use to build modern web apps.',
-			technologies: {
-
-			}
+			selectButton: 'Select a technology',
+			titleProjects: 'My projects using',
+			seeMore: 'See more at'
 		},
 		backEnd: {
-			description: 'Explore the technologies that I use to build modern RESTful APIs.'
+			description: 'Explore the technologies that I use to build modern RESTful APIs.',
+			selectButton: 'Select a technology',
+			continueButton: 'Others',
+			titleProjects: 'My projects using',
+			seeMore: 'See more at'
 		},
 		others: {
-			description: 'Explore other technologies that I use in my projects.'
+			title: 'Others',
+			description: 'Explore other technologies that I use in my projects.',
+			selectButton: 'Select a technology',
+			continueButton: 'Contact',
+			titleProjects: 'My projects using',
+			seeMore: 'See more at'
+
 		}
 
 	}

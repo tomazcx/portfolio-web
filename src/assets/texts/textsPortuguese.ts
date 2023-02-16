@@ -1,4 +1,11 @@
 export const textsPortuguese = {
+	components: {
+		project: {
+			title: 'Título:',
+			description: 'Descrição:',
+			tags: 'Tecnologias utilizadas:'
+		},
+	},
 	pages: {
 		home: {
 			title: 'Olá! Eu sou',
@@ -7,13 +14,27 @@ export const textsPortuguese = {
 			button: 'Comece a explorar!'
 		},
 		frontEnd: {
-			description: 'Explore as tecnologias que eu utilizo para construir aplicações web modernas.'
+			description: 'Explore as tecnologias que eu utilizo para construir aplicações web modernas.',
+			selectButton: 'Selecione uma tecnologia',
+			titleProjects: 'Meus projetos com',
+			seeMore: 'Veja mais em'
 		},
 		backEnd: {
-			description: 'Explore as tecnologias que eu utilizo para construir APIs RESTful modernas.'
+			description: 'Explore as tecnologias que eu utilizo para construir APIs RESTful modernas.',
+			selectButton: 'Selecione uma tecnologia',
+			continueButton: 'Outros',
+			titleProjects: 'Meus projetos com',
+			seeMore: 'Veja mais em'
+
 		},
 		others: {
-			description: 'Explore outras tecnologias que eu utilizo em meus projetos.'
+			title: 'Outros',
+			description: 'Explore outras tecnologias que eu utilizo em meus projetos.',
+			selectButton: 'Selecione uma tecnologia',
+			continueButton: 'Contato',
+			titleProjects: 'Meus projetos com',
+			seeMore: 'Veja mais em'
+
 		}
 	}
 

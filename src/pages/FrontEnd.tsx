@@ -46,22 +46,22 @@ export const FrontEnd = () => {
 			</Marquee>
 
 			{selected === null ?
-				<strong className="flex justify-center text-2xl lg:gap-4 text-center lg:text-4xl">Select a technology <span className="text-blue-400 hidden lg:inline">{hoverTec}</span></strong>
+				<strong className="flex justify-center text-2xl lg:gap-4 text-center lg:text-4xl">{language === 'es' ? textsEnglish.pages.frontEnd.selectButton : textsPortuguese.pages.frontEnd.selectButton} <span className="text-blue-400 hidden lg:inline">{hoverTec}</span></strong>
 				:
 				<article className="flex flex-col items-center gap-24">
 					<span className="text-4xl font-bold">{tecs[selected].name}</span>
-					<p className="lg:grid lg:grid-cols-12 flex flex-col gap-12 items-center lg:gap-0 lg:w-10/12">
-						<img src={tecs[selected].img} className="col-span-6 w-[200px] h-auto lg:w-[60%]" alt={`${tecs[selected].name} logo`} />
-						<p className="col-span-6 leading-8-">{tecs[selected].descriptionEnglish}</p>
+					<p className="lg:grid lg:grid-cols-12 flex flex-col gap-12 items-center  lg:w-10/12">
+						<img src={tecs[selected].img} className="col-span-6 w-[200px] h-auto lg:w-[55%]" alt={`${tecs[selected].name} logo`} />
+						<p className="col-span-6 leading-8 text-center lg:text-left">{language === 'es' ? tecs[selected].descriptionEnglish : tecs[selected].descriptionPortuguese}</p>
 					</p>
-					<p className="w-full text-center lg:text-left font-bold text-2xl">My projects using <span className="text-blue-400">{tecs[selected].name}</span>: </p>
+					<p className="w-full text-center lg:text-left font-bold text-2xl">{language === 'es' ? textsEnglish.pages.frontEnd.titleProjects : textsPortuguese.pages.frontEnd.titleProjects} <span className="text-blue-400">{tecs[selected].name}</span>: </p>
 					<div className="flex flex-col gap-12 w-full">
 						<Project />
 					</div>
-					<span className="font-bold">See more in: <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
-
+					<span className="font-bold">{language === 'es' ? textsEnglish.pages.frontEnd.seeMore : textsPortuguese.pages.frontEnd.seeMore} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
 				</article>
 			}
+
 		</m.main >
 	)
 }
