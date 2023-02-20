@@ -17,7 +17,7 @@ export const tecs: ITec[] = [
 		name: 'Git',
 		img: GitLogo,
 		descriptionEnglish: "Git is a open-source system for software project versioning. Released in 2005, It has become a essential tool for any development team to coordenate modifications on its projects, avoiding conflicts. I've been using this technology in all of my works and I have the ability of managing branches, commits and other essential features that are provided. ",
-		descriptionPortuguese: 'Git é um sistema open-source para versionamento de projetos de software. Lançado em 2005, tornou-se uma ferramenta essencial para qualquer equipe de desenvolvimento coordenar modificações em seus projetos, evitando conflitos. Tenho usado essa tecnologia em todos os meus trabalhos e possuo a capacidade de gerenciar branches, commits e outras funcionalidades essenciais que são disponíveis.'
+		descriptionPortuguese: 'Git é um sistema open-source para versionamento de projetos de software. Lançado em 2005, tornou-se uma ferramenta essencial para qualquer equipe de desenvolvimento coordenar modificações em seus projetos, evitando conflitos. Tenho usado essa tecnologia em todos os meus trabalhos e possuo a capacidade de gerenciar branches, commits e outras funcionalidades essenciais que são disponibilizadas.'
 	},
 	{
 		name: 'Github',

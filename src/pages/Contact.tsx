@@ -7,13 +7,33 @@ import picture from '../assets/images/pics/picture.jpg'
 import {GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo} from 'phosphor-react'
 import {SocialMedia} from '../components/SocialMedia'
 import {Input} from '../components/Input'
-import {useForm} from 'react-hook-form'
 import {Textarea} from '../components/Textarea'
+import {EmailAlert} from '../components/EmailAlert'
+import {ChangeEvent, FormEvent, useState} from 'react'
+
+interface FormValues {
+	name: string
+	from: string
+	subject: string
+	content: string
+}
 
 export const Contact = () => {
 
 	const {language} = useLanguage('es')
-	const {register, handleSubmit} = useForm()
+	const [error, setError] = useState('')
+	const [formData, setFormData] = useState<FormValues>({
+		name: '',
+		from: '',
+		content: '',
+		subject: ''
+	})
+
+	const handleInput = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		const {name, value} = event.target
+		setFormData(prevState => ({...prevState, [name]: value}))
+	}
+
 
 	return (
 		<m.main
@@ -39,22 +59,34 @@ export const Contact = () => {
 					title={language === 'es' ? textsEnglish.pages.contact.titleTwo : textsPortuguese.pages.contact.titleTwo}
 					description={language === 'es' ? textsEnglish.pages.contact.subtitleTwo : textsPortuguese.pages.contact.subtitleTwo}
 				/>
-				<div className="flex gap-8 lg:gap-20 items-center justify-center">
+				<div className="hidden lg:flex gap-4 lg:gap-20 items-center justify-center">
 					<SocialMedia logo={<InstagramLogo size={48} />} text="Instagram" href="https://instagram.com/tomazcx" target={'_blank'} />
 					<SocialMedia logo={<TwitterLogo size={48} />} text="Twitter" href="https://twitter.com/tomazcx" target={'_blank'} />
 					<SocialMedia logo={<LinkedinLogo size={48} />} text="Linkedin" href="https://linkedin.com/in/tomazcx/" target={'_blank'} />
 					<SocialMedia logo={<GithubLogo size={48} />} text="Github" href="https://github.com/tomazcx" target={'_blank'} />
 				</div>
+				<div className="flex gap-6 lg:hidden items-center justify-center">
+					<SocialMedia logo={<InstagramLogo size={36} />} text="Instagram" href="https://instagram.com/tomazcx" target={'_blank'} />
+					<SocialMedia logo={<TwitterLogo size={36} />} text="Twitter" href="https://twitter.com/tomazcx" target={'_blank'} />
+					<SocialMedia logo={<LinkedinLogo size={36} />} text="Linkedin" href="https://linkedin.com/in/tomazcx/" target={'_blank'} />
+					<SocialMedia logo={<GithubLogo size={36} />} text="Github" href="https://github.com/tomazcx" target={'_blank'} />
+				</div>
+
+
+
 
 				<strong className='text-center mx-auto text-2xl lg:text-3xl'>{language === 'es' ? textsEnglish.pages.contact.form.title : textsPortuguese.pages.contact.form.title}</strong>
+				<form onSubmit={(e: FormEvent) => e.preventDefault()} className='flex flex-col gap-8 items-end'>
+					<Input name="name" id="name" label={language === 'es' ? textsEnglish.pages.contact.form.name : textsPortuguese.pages.contact.form.name} type={"text"} onChange={(e) => handleInput(e)} />
+					<Input name="from" id="from" label={language === 'es' ? textsEnglish.pages.contact.form.email : textsPortuguese.pages.contact.form.email} type={"email"} onChange={(e) => handleInput(e)} />
+					<Input name="subject" id="subject" label={language === 'es' ? textsEnglish.pages.contact.form.subject : textsPortuguese.pages.contact.form.subject} type={"text"} onChange={(e) => handleInput(e)} />
+					<Textarea name="content" id="content" label={language === 'es' ? textsEnglish.pages.contact.form.content : textsPortuguese.pages.contact.form.content} onChange={(e) => handleInput(e)} rows={10} cols={30} />
 
-				<form className='flex flex-col gap-6 items-end'>
-					<Input name="name" id="name" label={language === 'es' ? textsEnglish.pages.contact.form.name : textsPortuguese.pages.contact.form.name} type={"text"} register={register} />
-					<Input name="email" id="email" label={language === 'es' ? textsEnglish.pages.contact.form.email : textsPortuguese.pages.contact.form.email} type={"email"} register={register} />
-					<Input name="subject" id="subject" label={language === 'es' ? textsEnglish.pages.contact.form.subject : textsPortuguese.pages.contact.form.subject} type={"text"} register={register} />
-					<Textarea name="content" id="content" label={language === 'es' ? textsEnglish.pages.contact.form.content : textsPortuguese.pages.contact.form.content} register={register} rows={10} cols={30} />
-					<button className='bg-blue-400 transition-colors hover:bg-blue-500 active:bg-blue-600 rounded-xl px-12 py-2 font-bold w-full lg:w-[15rem]'>{language === 'es' ? textsEnglish.pages.contact.form.send : textsPortuguese.pages.contact.form.send}</button>
+
+					<EmailAlert data={formData} setError={setError} />
+					<span className='text-center w-full text-red-500'>{error}</span>
 				</form>
+
 			</section>
 
 

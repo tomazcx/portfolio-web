@@ -34,12 +34,12 @@ export const tecs: ITec[] = [
 		name: 'Bootstrap',
 		img: BootstrapLogo,
 		descriptionEnglish: "Bootstrap is a web framework for developing interface components that uses HTML, CSS and Javascript. Released em 2011, it offers a varied range of styled and functional elements. I learned Bootstrap during my computer technician course, and I have the ability to develop a front-end project implementing classes and components offered by the technology to build a interactive and responsive web site.",
-		descriptionPortuguese: "Bootstrap é um framework web para desenolvimento de componentes de interface que utiliza HTML, CSS e Javascript. Lançado em 2011, oferece uma variada gama de elementos estilizados e funcionais. Aprendi a utilizar Bootstrap durante o meu curso de técnico de informática, e possuo a capacidade de desenvolver um projeto front-end implementando classes e componentes oferecidos pela tecnologia para construir um site interativo e responsivo "
+		descriptionPortuguese: "Bootstrap é um framework web para desenolvimento de componentes de interface que utiliza HTML, CSS e Javascript. Lançado em 2011, oferece uma variada gama de elementos estilizados e funcionais. Aprendi a utilizar Bootstrap durante o meu curso de técnico de informática, e possuo a capacidade de desenvolver um projeto front-end implementando classes e componentes oferecidos pela tecnologia para construir um site interativo e responsivo."
 	},
 	{
 		name: 'Storybook',
 		img: StorybookLogo,
-		descriptionEnglish: 'Storybook is a open source front-end workshop for building UI components and pages in isolation. It helps the developer to document every part of the project, making it able to see the behavior of a spefic component with different values. This portfolio was developed using this technology',
+		descriptionEnglish: 'Storybook is a open source front-end workshop for building UI components and pages in isolation. It helps the developer to document every part of the project, making it able to see the behavior of a spefic component with different values. This portfolio was developed using this technology.',
 		descriptionPortuguese: 'Storybook é um workshop front-end open source para construção de components UI e páginas em isolamento. Ajuda o desenvolvedor a documentar cada parte do projeto, fazendo com que seja possível observar o comportamento de um componente específico com diferentes valores. Esse portfólio foi desenvolvido utilizando essa tecnologia.'
 	}]
 

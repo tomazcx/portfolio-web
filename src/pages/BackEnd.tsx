@@ -9,12 +9,29 @@ import Marquee from 'react-fast-marquee'
 import {tecs} from "../assets/images/logos/back-end"
 import {Project} from "../components/Project"
 import {TitlePage} from "../components/TitlePage"
+import {useProjects} from "../hooks/useProjects"
+
+interface IProject {
+	name: string
+	description: string
+	url: string
+	tags: string[]
+	image: string
+}
 
 export const BackEnd = () => {
 
 	const [selected, setSelected] = useState<number | null>(null)
 	const [hoverTec, setHoverTec] = useState('') //default when no technology is selected	
+	const [projectsToShow, setProjects] = useState<IProject[]>([])
 	const {language} = useLanguage('es')
+	const {getProjectsByTag} = useProjects()
+
+	const handleClick = async (tag: string, index: number) => {
+		const response = await getProjectsByTag(tag)
+		setSelected(index)
+		setProjects(response.data)
+	}
 
 	return (
 		<m.main
@@ -37,7 +54,7 @@ export const BackEnd = () => {
 			>
 				{tecs.map((tec, index) => {
 					return (
-						<div className="w-[10rem] cursor-pointer" onMouseEnter={() => setHoverTec(tec.name)} onClick={() => setSelected(index)}>
+						<div className="w-[10rem] cursor-pointer" onMouseEnter={() => setHoverTec(tec.name)} onClick={() => handleClick(tec.name, index)}>
 							<img src={tec.img} alt="React image" className="w-full h-full pointer-events-none object-cover" />
 						</div>
 
@@ -51,17 +68,21 @@ export const BackEnd = () => {
 				:
 				<article className="flex flex-col items-center gap-24">
 					<span className="text-4xl font-bold">{tecs[selected].name}</span>
-					<p className="lg:grid lg:grid-cols-12 flex flex-col gap-12 items-center lg:w-10/12">
+					<p className="lg:grid lg:grid-cols-12 flex flex-col gap-12 items-center  lg:w-10/12">
 						<img src={tecs[selected].img} className="col-span-6 w-[200px] h-auto lg:w-[55%]" alt={`${tecs[selected].name} logo`} />
 						<p className="col-span-6 leading-8 text-center lg:text-left">{language === 'es' ? tecs[selected].descriptionEnglish : tecs[selected].descriptionPortuguese}</p>
 					</p>
-					<p className="w-full text-center lg:text-left font-bold text-2xl">{language === 'es' ? textsEnglish.pages.backEnd.titleProjects : textsPortuguese.pages.backEnd.titleProjects} <span className="text-blue-400">{tecs[selected].name}</span>: </p>
-					<div className="flex flex-col gap-12 w-full">
-						<Project />
+					{projectsToShow.length > 0 ? <p className="w-full text-center lg:text-left font-bold text-2xl">{language === 'es' ? textsEnglish.pages.backEnd.titleProjects : textsPortuguese.pages.backEnd.titleProjects} <span className="text-blue-400">{tecs[selected].name}</span> : </p> : null}
+					<div className="flex flex-col gap-36 w-full">
+						{projectsToShow.length > 0 ? projectsToShow.map(project => <Project project={project} />) : <span className="font-bold text-center">{language === 'es' ? textsEnglish.pages.backEnd.notFound : textsPortuguese.pages.backEnd.notFound} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
+						}
 					</div>
-					<span className="font-bold">{language === 'es' ? textsEnglish.pages.backEnd.seeMore : textsPortuguese.pages.backEnd.seeMore} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
+					{projectsToShow.length > 0 ? <span className="font-bold">{language === 'es' ? textsEnglish.pages.backEnd.seeMore : textsPortuguese.pages.backEnd.seeMore} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
+						: null
+					}
 				</article>
 			}
+
 		</m.main >
 	)
 }

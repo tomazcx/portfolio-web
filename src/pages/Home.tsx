@@ -60,11 +60,11 @@ export const Home = () => {
 						</h1>
 					</div>
 					<div className="lg:grid grid-cols-12 items-center w-full flex flex-col gap-8">
-						<p className=" md:text-xl col-span-6 leading-8">
+						<p className="md:text-xl col-span-6 leading-8">
 							{language === 'es' ? textsEnglish.pages.home.description : textsPortuguese.pages.home.description}
 						</p>
 
-						<a href="/front-end" className="w-full lg:mb-0 col-span-6 text-center text-3xl lg:text-5xl font-bold transition-colors hover:text-blue-500 action:text-blue-600">{language === 'es' ? textsEnglish.pages.home.button : textsPortuguese.pages.home.button}</a>
+						<a href="/front-end" className="w-full lg:mb-0 col-span-6 text-center lg:text-right text-3xl lg:text-5xl font-bold transition-colors hover:text-blue-500 action:text-blue-600">{language === 'es' ? textsEnglish.pages.home.button : textsPortuguese.pages.home.button}</a>
 					</div>
 				</article>
 

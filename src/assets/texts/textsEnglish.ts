@@ -5,26 +5,34 @@ export const textsEnglish = {
 			description: 'Description:',
 			tags: 'Technologies used:'
 		},
+		emailAlert: {
+			title: "Send the email?",
+			description: "Do NOT send the email for testing, send it only if you really have the intention to get it contact. The email will not appear on your email box since another account is being used as a sender. It won’t take longer than 48 hours to you receive an answer in the informed email address. ",
+			cancel: "Cancel",
+			action: "Send"
+		}
 	},
 	pages: {
 		home: {
 			title: 'Hello! I am',
 			subtitles: ['Front-end Developer', 'Back-end Developer', 'Fullstack Developer', 'Tomaz Xavier'],
-			description: 'I’m a 18 year old passionate about programming. My studies in web development started one year ago, while I was doing a computer technician course. In this journey, I learned to create fullstack applications using a various number of technologies, since React to NestJS. Start exploring to discover more about me!',
+			description: 'I’m a 18 year old passionate about programming. My studies in web development started three years ago, while I was doing a computer technician course. In this journey, I learned to create fullstack applications using a various number of technologies, since React to NestJS. Start exploring to discover more about me!',
 			button: 'Start exploring!'
 		},
 		frontEnd: {
 			description: 'Explore the technologies that I use to build modern web apps.',
 			selectButton: 'Select a technology',
 			titleProjects: 'My projects using',
-			seeMore: 'See more at'
+			seeMore: 'See more at',
+			notFound: 'No projects found. See more at:'
 		},
 		backEnd: {
 			description: 'Explore the technologies that I use to build modern RESTful APIs.',
 			selectButton: 'Select a technology',
 			continueButton: 'Others',
 			titleProjects: 'My projects using',
-			seeMore: 'See more at'
+			seeMore: 'See more at',
+			notFound: 'No projects found. See more at:'
 		},
 		others: {
 			title: 'Others',
@@ -32,7 +40,8 @@ export const textsEnglish = {
 			selectButton: 'Select a technology',
 			continueButton: 'Contact',
 			titleProjects: 'My projects using',
-			seeMore: 'See more at'
+			seeMore: 'See more at',
+			notFound: 'No projects found. See more at:'
 		},
 		contact: {
 			title: 'About me',

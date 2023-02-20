@@ -27,7 +27,7 @@ export const tecs: ITec[] = [
 	{
 		name: 'Typescript',
 		img: TsLogo,
-		descriptionEnglish: "Typescript is a programming language developed by Microsoft. Its a syntatic superset for Javascript that provides funcionalities that aren't natives from the language, as well as data types and object orientation. My first projects with this technology were made along with React in the building of front-end applications, and two months ago I've started to build RESTful APIs with Typescript and frameworks like Express and NestJS. The API for this portfolio was developed using this technology ",
+		descriptionEnglish: "Typescript is a programming language developed by Microsoft. Its a syntatic superset for Javascript that provides funcionalities that aren't natives from the language, as well as data types and object orientation. My first projects with this technology were made along with React in the building of front-end applications, and two months ago I've started to build RESTful APIs with Typescript and frameworks like Express and NestJS. The API for this portfolio was developed using this technology.",
 		descriptionPortuguese: 'Typescript é uma linguagem de programação desenvolvida pela Microsoft. Trata-se de um superconjunto sintático para Javascript que providencia funcionalidades que não são nativas da linguagem, como tipagem para dados e orientação a objetos. Meus primeitos projetos com essa tecnologia foram feitos juntamente com React na construção de aplicações front-end, e há dois meses tenho começado a construir APIs RESTful com Typescript e frameworks como Express e NestJS. A API para esse portfólio foi desenvolvida utilizando essa tecnologia.'
 	},
 	{
@@ -70,7 +70,7 @@ export const tecs: ITec[] = [
 		name: 'MongoDB',
 		img: MongoDBLogo,
 		descriptionEnglish: 'MongoDB is a NoSQL database oriented to documents that are similar to JSON, known as BSON. It allows applications to model informations with less restriction than a SQL database, making it easier to query for data and for establishing the relation between documents. I use MongoDB in my projects with the Mongoose library, a NodeJS and Typescript ODM (Object-Data Modeling). The API for this portfolio was developed using this technology.',
-		descriptionPortuguese: "MongoDB é um banco de dados NoSQL orientado a documentos semelhantes a JSON, conhecidos como BSON. Suas caracteristicas permitem que aplicações modelem infomrações com menos restrição que um banco SQL, facilitando a busca por dados e o estabelecimento de relationamento entre documents. Utilizo MongoDB em meus projetos com a biblioteca Mongoose, uma ODM (Object-Data Modeling) para NodeJS e Typescript. A API para esse portfolio foi desenvolvida utilizando essa tecnologia"
+		descriptionPortuguese: "MongoDB é um banco de dados NoSQL orientado a documentos semelhantes a JSON, conhecidos como BSON. Suas caracteristicas permitem que aplicações modelem infomrações com menos restrição que um banco SQL, facilitando a busca por dados e o estabelecimento de relationamento entre documents. Utilizo MongoDB em meus projetos com a biblioteca Mongoose, uma ODM (Object-Data Modeling) para NodeJS e Typescript. A API para esse portfolio foi desenvolvida utilizando essa tecnologia."
 	},
 	{
 		name: 'Redis',
