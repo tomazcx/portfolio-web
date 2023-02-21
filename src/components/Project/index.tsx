@@ -2,7 +2,7 @@ import {textsEnglish} from "../../assets/texts/textsEnglish"
 import {textsPortuguese} from "../../assets/texts/textsPortuguese"
 import {useLanguage} from "../../hooks/useLanguage"
 
-interface IProps {
+export interface IProject {
 	project: {
 		name: string
 		description: string
@@ -12,7 +12,7 @@ interface IProps {
 	}
 }
 
-export const Project = ({project}: IProps) => {
+export const Project = ({project}: IProject) => {
 
 	const {language} = useLanguage('es')
 

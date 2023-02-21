@@ -47,9 +47,9 @@ export const EmailAlert = ({data, setError}: IEmailAlert) => {
 			</Alert.Trigger>
 			<Alert.Portal>
 				<Alert.Overlay className='w-screen h-screen fixed inset-0 bg-black/60' />
-				<Alert.Content className='flex flex-col gap-12 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-8 lg:p-8 bg-background rounded-lg w-11/12 max-w-[800px]'>
+				<Alert.Content className='flex flex-col gap-12 fixed top-1/2 left-1/2 text-white -translate-x-1/2 -translate-y-1/2 px-4 py-8 lg:p-8 bg-background rounded-lg w-11/12 max-w-[800px]'>
 					<Alert.Title className='text-xl lg:text-3xl font-bold'>{language === 'es' ? textsEnglish.components.emailAlert.title : textsPortuguese.components.emailAlert.title}</Alert.Title>
-					<Alert.Description className='text-sm lg:text-lg leading-8'>{language === 'es' ? textsEnglish.components.emailAlert.description : textsPortuguese.components.emailAlert.description}</Alert.Description>
+					<Alert.Description className='text-sm  lg:text-lg leading-8'>{language === 'es' ? textsEnglish.components.emailAlert.description : textsPortuguese.components.emailAlert.description}</Alert.Description>
 					<div className="hidden lg:flex lg:flex-row justify-end gap-4">
 						<Alert.Cancel className='border-2 border-blue-400  transition-colors px-12 py-2 rounded-lg hover:bg-blue-500 active:bg-blue-600 w-full lg:w-[15rem]'>{language === 'es' ? textsEnglish.components.emailAlert.cancel : textsPortuguese.components.emailAlert.cancel}</Alert.Cancel>
 						<Alert.Action onClick={() => handleSendEmail()} className='bg-blue-400 transition-colors hover:bg-blue-500 active:bg-blue-600 rounded-lg px-12 py-2 w-full lg:w-[15rem]'  >{language === 'es' ? textsEnglish.components.emailAlert.action : textsPortuguese.components.emailAlert.action}</Alert.Action>
