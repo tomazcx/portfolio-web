@@ -47,7 +47,7 @@ export const textsPortuguese = {
 		contact: {
 			title: 'Sobre mim',
 			subtitle: 'Leia um pouco mais sobre mim e veja como nós podemos entrar em contato.',
-			description: "Meu nome é Tomaz Xavier, tenho 18 anos e estudo diariamente a fim de me tornar um desenvolvedor web profissional. Formado como um técnico em informática pelo IFC Campus Videira, eu estive aprendido sobre as tecnologias mais modernas do mercado com o objetivo de conseguir meu primeiro trabalho como um programador.",
+			description: "Meu nome é Tomaz Xavier, tenho 18 anos e estudo diariamente a fim de me tornar um desenvolvedor web profissional. Formado como um técnico em informática pelo IFC Campus Videira, eu estive aprendendo sobre as tecnologias mais modernas do mercado com o objetivo de conseguir meu primeiro trabalho como um programador.",
 			titleTwo: 'Contato',
 			subtitleTwo: 'Nós podemos conversar em qualquer uma das redes sociais abaixo, ou você pode me enviar um email agora mesmo!',
 			form: {
