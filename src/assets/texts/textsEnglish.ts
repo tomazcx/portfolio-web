@@ -7,7 +7,7 @@ export const textsEnglish = {
 		},
 		emailAlert: {
 			title: "Send the email?",
-			description: "Do NOT send the email for testing, send it only if you really have the intention to get it contact. The email will not appear on your email box since another account is being used as a sender. It won’t take longer than 48 hours to you receive an answer in the informed email address. ",
+			description: "Do NOT send the email for testing, send it only if you really have the intention to get in contact. The email will not appear on your email box since another account is being used as a sender. It won’t take longer than 48 hours to you receive an answer in the informed email address. ",
 			cancel: "Cancel",
 			action: "Send"
 		}

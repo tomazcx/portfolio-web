@@ -1,5 +1,5 @@
 import {Meta, StoryObj} from '@storybook/react'
-import {Textarea} from '.'
+import {ITextarea, Textarea} from '.'
 
 export default {
 	title: 'Form/Textarea',
@@ -15,4 +15,8 @@ export default {
 	]
 } as Meta
 
-export const Default: StoryObj = {}
+export const Default: StoryObj<ITextarea> = {
+	args: {
+		label: 'Content'
+	}
+}

@@ -1,10 +1,10 @@
 import {TextareaHTMLAttributes} from "react"
 
-interface IInput extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface ITextarea extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	label: string
 }
 
-export const Textarea = ({label, ...rest}: IInput) => {
+export const Textarea = ({label, ...rest}: ITextarea) => {
 
 	return (
 		<fieldset className="flex flex-col gap-2 w-full">

@@ -1,5 +1,5 @@
 import {Meta, StoryObj} from '@storybook/react'
-import {Input} from '.'
+import {IInput, Input} from '.'
 
 export default {
 	title: 'Form/Input',
@@ -16,4 +16,8 @@ export default {
 	]
 } as Meta
 
-export const Default: StoryObj = {}
+export const Default: StoryObj<IInput> = {
+	args: {
+		label: 'Name'
+	}
+}

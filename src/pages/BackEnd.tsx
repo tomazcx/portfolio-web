@@ -2,7 +2,7 @@ import {textsEnglish} from "../assets/texts/textsEnglish"
 import {textsPortuguese} from "../assets/texts/textsPortuguese"
 import {useLanguage} from "../hooks/useLanguage"
 import {motion as m} from "framer-motion"
-import {useEffect, useRef, useState} from "react"
+import {useState} from "react"
 import 'swiper/css'
 import 'swiper/css/navigation'
 import Marquee from 'react-fast-marquee'
@@ -12,6 +12,7 @@ import {TitlePage} from "../components/TitlePage"
 import {useProjects} from "../hooks/useProjects"
 
 interface IProject {
+	_id: string
 	name: string
 	description: string
 	url: string
@@ -54,7 +55,7 @@ export const BackEnd = () => {
 			>
 				{tecs.map((tec, index) => {
 					return (
-						<div className="w-[10rem] cursor-pointer" onMouseEnter={() => setHoverTec(tec.name)} onClick={() => handleClick(tec.name, index)}>
+						<div key={index} className="w-[10rem] cursor-pointer" onMouseEnter={() => setHoverTec(tec.name)} onClick={() => handleClick(tec.name, index)}>
 							<img src={tec.img} alt="React image" className="w-full h-full pointer-events-none object-cover" />
 						</div>
 
@@ -74,7 +75,7 @@ export const BackEnd = () => {
 					</p>
 					{projectsToShow.length > 0 ? <p className="w-full text-center lg:text-left font-bold text-2xl">{language === 'es' ? textsEnglish.pages.backEnd.titleProjects : textsPortuguese.pages.backEnd.titleProjects} <span className="text-blue-400">{tecs[selected].name}</span> : </p> : null}
 					<div className="flex flex-col gap-36 w-full">
-						{projectsToShow.length > 0 ? projectsToShow.map(project => <Project project={project} />) : <span className="font-bold text-center">{language === 'es' ? textsEnglish.pages.backEnd.notFound : textsPortuguese.pages.backEnd.notFound} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
+						{projectsToShow.length > 0 ? projectsToShow.map(project => <Project key={project._id} project={project} />) : <span className="font-bold text-center">{language === 'es' ? textsEnglish.pages.backEnd.notFound : textsPortuguese.pages.backEnd.notFound} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
 						}
 					</div>
 					{projectsToShow.length > 0 ? <span className="font-bold">{language === 'es' ? textsEnglish.pages.backEnd.seeMore : textsPortuguese.pages.backEnd.seeMore} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>

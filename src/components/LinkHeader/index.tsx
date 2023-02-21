@@ -2,7 +2,7 @@ import classNames from "classnames"
 import {AnchorHTMLAttributes} from "react"
 import {useLocation} from "react-router-dom"
 
-interface ILinkHeader extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface ILinkHeader extends AnchorHTMLAttributes<HTMLAnchorElement> {
 	text: string
 }
 

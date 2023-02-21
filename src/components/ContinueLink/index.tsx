@@ -1,7 +1,7 @@
 import {CaretRight} from "phosphor-react"
 import {AnchorHTMLAttributes} from "react"
 
-interface IContinueLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface IContinueLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
 	text: string
 }
 

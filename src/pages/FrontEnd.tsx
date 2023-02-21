@@ -12,6 +12,7 @@ import {useProjects} from "../hooks/useProjects"
 import {Project} from "../components/Project"
 
 interface IProject {
+	_id: string
 	name: string
 	description: string
 	url: string
@@ -50,11 +51,11 @@ export const FrontEnd = () => {
 				gradient={false}
 				speed={150}
 				pauseOnClick
-				className="gap-8"
+				className="gap-32 lg:gap-0"
 			>
 				{tecs.map((tec, index) => {
 					return (
-						<div className="w-[10rem] cursor-pointer" onMouseEnter={() => setHoverTec(tec.name)} onClick={() => handleClick(tec.name, index)}>
+						<div key={index} className="w-[10rem] cursor-pointer" onMouseEnter={() => setHoverTec(tec.name)} onClick={() => handleClick(tec.name, index)}>
 							<img src={tec.img} alt="React image" className="w-full h-full pointer-events-none object-cover" />
 						</div>
 
@@ -74,7 +75,7 @@ export const FrontEnd = () => {
 					</p>
 					{projectsToShow.length > 0 ? <p className="w-full text-center lg:text-left font-bold text-2xl">{language === 'es' ? textsEnglish.pages.frontEnd.titleProjects : textsPortuguese.pages.frontEnd.titleProjects} <span className="text-blue-400">{tecs[selected].name}</span> : </p> : null}
 					<div className="flex flex-col gap-36 w-full">
-						{projectsToShow.length > 0 ? projectsToShow.map(project => <Project project={project} />) : <span className="font-bold text-center">{language === 'es' ? textsEnglish.pages.frontEnd.notFound : textsPortuguese.pages.frontEnd.notFound} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
+						{projectsToShow.length > 0 ? projectsToShow.map(project => <Project key={project._id} project={project} />) : <span className="font-bold text-center">{language === 'es' ? textsEnglish.pages.frontEnd.notFound : textsPortuguese.pages.frontEnd.notFound} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>
 						}
 					</div>
 					{projectsToShow.length > 0 ? <span className="font-bold">{language === 'es' ? textsEnglish.pages.frontEnd.seeMore : textsPortuguese.pages.frontEnd.seeMore} <a href="https://github.com/tomazcx" target={'_blank'} className="text-blue-400 transition-colors hover:text-blue-500 active:text-blue-600">https://github.com/tomazcx</a></span>

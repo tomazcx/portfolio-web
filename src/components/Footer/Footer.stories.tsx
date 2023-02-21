@@ -9,7 +9,9 @@ export default {
 		(Story) => {
 			return (
 				<BrowserRouter>
-					{Story()}
+					<div className="text-white">
+						{Story()}
+					</div>
 				</BrowserRouter>
 
 			)
