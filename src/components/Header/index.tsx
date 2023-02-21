@@ -39,9 +39,9 @@ export const Header = () => {
 		<header className="flex justify-end lg:justify-between items-center px-12 lg:px-48 py-12">
 			<div className="lg:flex lg:gap-8 lg:font-bold hidden" >
 				<label htmlFor="lang">{language === 'es' ? 'Select a language' : 'Selecione uma linguagem'}</label>
-				<select id="lang" defaultValue={language} name="lang" onChange={(e) => handleChangeLanguage(e.target.value)} className="bg-transparent cursor-pointer">
-					<option value="es">es</option>
-					<option value="pt-br">pt-br</option>
+				<select id="lang" defaultValue={language} name="lang" onChange={(e) => handleChangeLanguage(e.target.value)} className="bg-transparent cursor-pointer border-none">
+					<option className="bg-transparent" value="es">es</option>
+					<option className="bg-transparent" value="pt-br">pt-br</option>
 				</select>
 			</div>
 
