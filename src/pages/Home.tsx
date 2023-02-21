@@ -33,7 +33,7 @@ export const Home = () => {
 			transition={{duration: 0.8}}
 			exit={{opacity: 0}}
 			className="flex flex-col flex-1 justify-between">
-			<section className="lg:px-48 lg:py-12 px-12 mb-32 lg:mb-0 ">
+			<section className="lg:px-48 lg:py-12 px-12 mb-12 lg:mb-0 ">
 				<article className="flex justify-between flex-col lg:text-left text-center gap-14  md:gap-36 ">
 					<div className="flex flex-col gap-12">
 						<h2 className="text-4xl lg:text-6xl font-bold">{language === 'es' ? textsEnglish.pages.home.title : textsPortuguese.pages.home.title}</h2>
