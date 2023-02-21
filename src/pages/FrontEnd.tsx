@@ -51,7 +51,7 @@ export const FrontEnd = () => {
 				gradient={false}
 				speed={150}
 				pauseOnClick
-				className="gap-32 lg:gap-0"
+				className="gap-32"
 			>
 				{tecs.map((tec, index) => {
 					return (

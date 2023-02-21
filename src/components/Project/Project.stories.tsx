@@ -1,5 +1,6 @@
 import {IProject, Project} from "."
 import {Meta, StoryObj} from "@storybook/react"
+import APILogo from 'src/assets/images/pics/api-logo.webp'
 
 export default {
 	title: 'Components/Project',
@@ -23,7 +24,7 @@ export default {
 	]
 } as Meta
 
-export const Default: StoryObj<IProject> = {
+export const FrontEndProject: StoryObj<IProject> = {
 	args: {
 		project: {
 			name: 'Portfolio web',
@@ -43,6 +44,7 @@ export const WithoutImage: StoryObj<IProject> = {
 			description: 'My web portfolio',
 			url: 'https://github.com/tomazcx/portfolio-web',
 			tags: ['React', 'TailwindCSS', 'Storybook'],
+			image: APILogo
 		}
 	}
 }
