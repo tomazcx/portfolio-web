@@ -40,7 +40,7 @@ export const Others = () => {
 			animate={{opacity: 1}}
 			transition={{duration: 0.8}}
 			exit={{opacity: 0}}
-			className="lg:px-48 px-4 flex flex-col gap-36 justify-between">
+			className="lg:px-28 px-4 flex flex-col gap-36 justify-between">
 			<TitlePage
 				title={language === 'es' ? textsEnglish.pages.others.title : textsPortuguese.pages.others.title}
 				description={language === 'es' ? textsEnglish.pages.others.description : textsPortuguese.pages.others.description}

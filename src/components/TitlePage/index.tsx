@@ -13,7 +13,7 @@ export const TitlePage = ({title, description, textContinue, pathContinue}: ITit
 	return (
 		<div className="flex flex-col gap-12">
 			<div className="flex justify-between items-center overflow-hidden">
-				<h1 className="text-blue-400 text-4xl lg:text-7xl font-bold">
+				<h1 className="text-blue-400 text-4xl lg:text-6xl font-bold">
 					<Typewriter
 						onInit={(typewriter) => {
 							typewriter.typeString(title)

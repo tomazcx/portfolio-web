@@ -1,4 +1,4 @@
-import {List, X} from "phosphor-react"
+import {CaretDown, List, X} from "phosphor-react"
 import {useLanguage} from "../../hooks/useLanguage"
 import {LinkHeader} from "../LinkHeader"
 import * as Dialog from '@radix-ui/react-dialog'
@@ -36,13 +36,18 @@ export const Header = () => {
 	}
 
 	return (
-		<header className="flex justify-end lg:justify-between items-center px-12 lg:px-48 py-12">
-			<div className="lg:flex lg:gap-8 lg:font-bold hidden" >
+		<header className="flex justify-end lg:justify-between items-center px-4 lg:px-28 py-12">
+			<div className="lg:flex lg:gap-8 lg:justify-between lg:font-bold hidden" >
 				<label htmlFor="lang">{language === 'es' ? 'Select a language' : 'Selecione uma linguagem'}</label>
-				<select id="lang" defaultValue={language} name="lang" onChange={(e) => handleChangeLanguage(e.target.value)} className="bg-transparent cursor-pointer border-none">
-					<option className="bg-transparent" value="es">es</option>
-					<option className="bg-transparent" value="pt-br">pt-br</option>
-				</select>
+				<div className="flex items-center cursor-pointer">
+					<select id="lang" defaultValue={language} name="lang" onChange={(e) => handleChangeLanguage(e.target.value)} className="bg-transparent cursor-pointer border-none">
+						<option className="bg-transparent" value="es">es</option>
+						<option className="bg-transparent" value="pt-br">pt-br</option>
+					</select>
+					<CaretDown size={18} />
+
+
+				</div>
 			</div>
 
 			<nav className="lg:flex lg:gap-8 hidden">

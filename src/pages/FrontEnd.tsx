@@ -40,7 +40,7 @@ export const FrontEnd = () => {
 			animate={{opacity: 1}}
 			transition={{duration: 0.8}}
 			exit={{opacity: 0}}
-			className="lg:px-48 px-4 flex flex-col gap-36 justify-between">
+			className="lg:px-28 px-4 flex flex-col gap-36 justify-between">
 			<TitlePage
 				title="Front-end"
 				description={language === 'es' ? textsEnglish.pages.frontEnd.description : textsPortuguese.pages.frontEnd.description}
