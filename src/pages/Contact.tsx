@@ -48,7 +48,10 @@ export const Contact = () => {
 					description={language === 'es' ? textsEnglish.pages.contact.subtitle : textsPortuguese.pages.contact.subtitle}
 				/>
 				<div className="lg:grid lg:grid-cols-12 flex flex-col gap-12 items-center">
-					<img src={picture} alt="" className="col-span-6 w-[60%] h-auto rounded-full" />
+					<div className="rounded-full w-[20rem] col-span-6 h-[20rem] lg:w-[25rem] lg:h-[25rem] mx-auto">
+						<img src={picture} alt="" className="object-cover w-full h-full rounded-full" />
+
+					</div>
 					<p className='col-span-6 text-lg leading-8 text-center lg:text-left'>{language === 'es' ? textsEnglish.pages.contact.description : textsPortuguese.pages.contact.description}</p>
 				</div>
 
