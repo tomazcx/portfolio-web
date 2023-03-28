@@ -9,6 +9,8 @@ import SequelizeLogo from './sequelize.png'
 import SwaggerLogo from './swagger.png'
 import SQLLogo from './sql.png'
 import RedisLogo from './redis.png'
+import PHPLogo from './php-plain.svg'
+import LaravelLogo from './laravel-plain.svg'
 
 interface ITec {
 	name: string
@@ -21,19 +23,31 @@ export const tecs: ITec[] = [
 	{
 		name: 'NodeJS',
 		img: NodeJSLogo,
-		descriptionEnglish: "NodeJS is a open-source Javascript runtime that allows the execution of applications developed with the language outside a web browser. It uses the V8 engine and operates on single thread runs. I've developed projects using the technology for just over two months and, since then, I've learned to use frameworks like Express to build RESTful APIs and MVCs using the template engine handlebars. Besides, I've focused on learning more about the implementation of the SOLID principles in a project along with the design pattern DDD, with Clean Archtecture and with TDD. The API for this portfolio was developed using this technology.",
-		descriptionPortuguese: 'NodeJS é um ambiente de execução de Javascript open-source que permite executar aplicações desenvolvidas com a linguagem independentemente de um navegador. Utiliza o motor V8 e opera em execuções single thread. Tenho desenvolvido projetos utilizando a tecnologia a pouco mais de dois meses, e desde então, aprendi a utilizar frameworks como Express para contruir APIs RESTful e MVCs utilizando a template engine handlebars. Além disso, tenho focado em aprender mais sobre a implementação dos princípios SOLID em um projeto juntamente com o design pattern DDD, com Clean Archtecture e com TDD. A API para esse portfolio foi desenvolvida utilizando essa tecnologia.'
+		descriptionEnglish: "NodeJS is a open-source Javascript runtime that allows the execution of applications developed with the language outside a web browser. It uses the V8 engine and operates on single thread runs. I have the ability to use frameworks such as Express to build RESTful APIs and MVCs using the template engine handlebars. Besides, I've focused on learning more about the implementation of the SOLID principles in a project along with the design pattern DDD, with Clean Archtecture and with TDD. The API for this portfolio was developed using this technology.",
+		descriptionPortuguese: 'NodeJS é um ambiente de execução de Javascript open-source que permite executar aplicações desenvolvidas com a linguagem independentemente de um navegador. Utiliza o motor V8 e opera em execuções single thread. Possuo a capacidade de utilizar frameworks como Express para contruir APIs RESTful e MVCs utilizando a template engine handlebars. Além disso, tenho focado em aprender mais sobre a implementação dos princípios SOLID em um projeto juntamente com o design pattern DDD, com Clean Archtecture e com TDD. A API para esse portfolio foi desenvolvida utilizando essa tecnologia.'
 	},
 	{
 		name: 'Typescript',
 		img: TsLogo,
-		descriptionEnglish: "Typescript is a programming language developed by Microsoft. Its a syntatic superset for Javascript that provides funcionalities that aren't natives from the language, as well as data types and object orientation. My first projects with this technology were made along with React in the building of front-end applications, and two months ago I've started to build RESTful APIs with Typescript and frameworks like Express and NestJS. The API for this portfolio was developed using this technology.",
+		descriptionEnglish: "Typescript is a programming language developed by Microsoft. Its a syntatic superset for Javascript that provides funcionalities that aren't natives from the language, as well as data types and object orientation. With this technology, I'm able to build front-end applications with React and RESTful APIs with frameworks like Express and NestJS. The API for this portfolio was developed using this technology.",
 		descriptionPortuguese: 'Typescript é uma linguagem de programação desenvolvida pela Microsoft. Trata-se de um superconjunto sintático para Javascript que providencia funcionalidades que não são nativas da linguagem, como tipagem para dados e orientação a objetos. Meus primeitos projetos com essa tecnologia foram feitos juntamente com React na construção de aplicações front-end, e há dois meses tenho começado a construir APIs RESTful com Typescript e frameworks como Express e NestJS. A API para esse portfólio foi desenvolvida utilizando essa tecnologia.'
+	},
+	{
+		name: 'PHP',
+		img: PHPLogo,
+		descriptionEnglish: "Originally Personal Home Page, now widely known as Hypertext Preprocessor, PHP is a programming language especially suited for web development. According to W3Techs, 78.8% of all websites use this technology. With it, I'm able to build MVC and RESTful APIs applications using the framework Laravel, with TDD and Clean Architecture, following the SOLID principles.",
+		descriptionPortuguese: "Originalmente Personal Home Page, agora mundialmente conhecido como Hypertext Preprocessor, PHP é uma linguagem de programação aplicada especialmente para desenvolvimento web. De acordo com W3Techs, 78,8% de todos os sites usam essa tecnologia. Com ela, eu sou capaz de construir aplicações MVC e APIs RESTful utilizando o framework Laravel, com TDD e Clean Architecture, aplicando os principíos SOLID."
+	},
+	{
+		name: 'Laravel',
+		img: LaravelLogo,
+		descriptionEnglish: "Laravel is a open-source PHP framework created by Taylor B. Otwell for the development of MVC web systems and RESTful APIs. I have the ability to use Laravel to develope systems with complex database relations using the Eloquent ORM, set up a development environment with Sail and writting unit and feature tests with PHPUnit.",
+		descriptionPortuguese: "Laravel é um framework PHP open-source criado por Taylor B. Otwell para o desenvolvimento the sistemas web MVC e APIs RESTful. Eu possuo a capacidade de usar Laravel para desenvolver sistemas com relações de banco de dados complexas utilizando a ORM Eloquent, configurar um ambiente de desenvolvimento com Sail e escrever testes unitários e de feature com PHPUnit. "
 	},
 	{
 		name: 'NestJS',
 		img: NestJSLogo,
-		descriptionEnglish: "NestJS is a framework for building NodeJS applications. Released in 2017, it has an archtecture strongly inspired by Angular, with decorators to define the responsability of each class and with a module system. It has been my main option in the building of Node projects since I started studying it, and I'm constanly learning more about the implementation of archtectures and desing patterns for building scalable and clean systems, besides test driven development with Jest. The API for this portfolio was developed using this technology.",
+		descriptionEnglish: "NestJS is a framework for building NodeJS applications. Released in 2017, it has an architecture strongly inspired by Angular, with decorators to define the responsability of each class and with a module system. It has been my main option in the building of Node projects since I started studying it, and I'm constanly learning more about the implementation of architectures and desing patterns for building scalable and clean systems, besides test driven development with Jest. The API for this portfolio was developed using this technology.",
 		descriptionPortuguese: 'NestJS é um framework para construção de aplicações NodeJS. Lançado em 2017, possui uma arquitetura fortemente inspirada no Angular, com decorators para definir a responsabilidade de cada uma das classes e com um sistema de módulos. Têm sido minha principal opção na construção de projetos Node desde que comecei a estudá-la, e estou constantemente procurando aprender mais sobre implementação de arquiteturas e design patterns para construção de sistemas limpos e escaláveis, além de desenvolvimento guiado por testes com Jest. A API para esse portfólio foi desenvolvida utilizando essa tecnologia.'
 	},
 	{
@@ -83,7 +97,8 @@ export const tecs: ITec[] = [
 		img: SwaggerLogo,
 		descriptionEnglish: "Swagger is a set of tools for model and document the development of APIs, offering the possibility of defining clearly each one of the application's endpoints as well the values that expect to receive and return. The API for this portfolio was developed using this technology.",
 		descriptionPortuguese: 'Swagger é um conjunto de ferramentas para modelar e documentar o desenvolvimento de APIs, oferecendo a possiblidade de definir claramente cada uma das rotas da aplicação assim como os valores que espera receber e retornar. A API para esse portfolio foi desenvolvida utilizando essa tecnologia.'
-	}
+	},
+
 ]
 
 

@@ -16,7 +16,7 @@ export const textsEnglish = {
 		home: {
 			title: 'Hello! I am',
 			subtitles: ['Front-end Developer', 'Back-end Developer', 'Fullstack Developer', 'Tomaz Xavier'],
-			description: 'I’m a 18 year old passionate about programming. My studies in web development started three years ago, while I was doing a computer technician course. In this journey, I learned to create fullstack applications using a various number of technologies, since React to NestJS. Start exploring to discover more about me!',
+			description: "I’m a fullstack web developer passionate about programming. My studies in programming started three years ago and, along that journey, I've learned to create Single Page Applications, MVC systems and RESTful APIs that are testable and scalable using a various number of technologies, since React to NestJS and Laravel. Start exploring to discover more about me!",
 			button: 'Start exploring!'
 		},
 		frontEnd: {
