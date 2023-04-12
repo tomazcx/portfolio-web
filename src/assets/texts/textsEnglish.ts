@@ -46,7 +46,7 @@ export const textsEnglish = {
 		contact: {
 			title: 'About me',
 			subtitle: 'Read a little bit more about me and get to know how we can get in contact',
-			description: "My name is Tomaz Xavier and I study everyday in order to become a professional web developer. Formed as a computer technician at IFC Campus Videira, I’ve learned to create Single Page Applications, MVC systems and RESTful APIs, being able to write automated tests and apply Clean Architecture in my projects.",
+			description: "My name is Tomaz Xavier I am a professional web developer. Formed as a computer technician at IFC Campus Videira, I have the abillity to create Single Page Applications, MVC systems, RESTful APIs, write automated tests and apply Clean Architecture in my projects.",
 			titleTwo: 'Contact',
 			subtitleTwo: 'We can talk in any of the social medias above, or you can send me an email right now!',
 			form: {
