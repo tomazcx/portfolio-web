@@ -3,8 +3,9 @@ import NextJSLogo from './nextjs.svg'
 import TailwindLogo from './TailwindCSS.png'
 import StorybookLogo from './storybook.png'
 import BootstrapLogo from './bootstrap.png'
-import StyledComponentsLogo from './styled-components.png'
+import StyledComponentsLogo from './styled-components-1.svg'
 import SassLogo from './sass-original.svg'
+import ReduxLogo from './redux-original.svg'
 
 interface ITec {
 	name: string
@@ -27,10 +28,16 @@ export const tecs: ITec[] = [
 		descriptionPortuguese: 'NextJS é um framework React open-source criado e mantida pela Vercel desde 2016. Possiblita a geração de sites estáticos e oferece funcionalidades como SSR (Server Side Rendering), middlewares, roteamento, entre outros. Como um desenvolvedor fullstack, possuo a capacidade de criar aplicações web utilizando essa tecnologia com, assim como React, hooks personalizados, chamadas a API, interfaces interarivas, tudo isso utilizando Typescript.'
 	},
 	{
+		name: 'Redux',
+		img: ReduxLogo,
+		descriptionEnglish: 'A open-source Javascript library to manage the global states of an application. It helps the developer to create software that behave consistently, centralizing the logic. I have the abillity to use Redux for managing the global state of an application with Redux Toolkit, Redux Thunk and persist data with Redux Persist.',
+		descriptionPortuguese: 'Uma biblioteca Javascript open-source para gerenciar estados globais de uma aplicação. Ajuda o desenvolvedor a criar softwares que se comportem de maneira consistente, centralizando a lógica. Eu possuo a capacidade de usar Redux para gerenciar o estado global de uma aplicação com Redux Toolkit, Redux Thunk e persistir dados com Redux Persist. '
+	},
+	{
 		name: 'Sass',
 		img: SassLogo,
 		descriptionEnglish: 'Syntactically Awesome Style Sheets is stylesheet language that extends CSS, giving it superpowers. It allows the developer to write CSS with a cleaner syntax and use variables, functions, loops, conditionals and others. I have the abillity to create a complete UI using this technology.',
-		descriptionPortuguese: 'Syntactically Awesome Style Sheets é uma linguagem de folha de estilo que estende o CSS, dando a ele super podered. Permite que o desenvolvedor escreva CSS com uma sintaxe mais limpa e use variáveis, funções, loops, condicionais e entre outros. Eu possuo a capacidade de criar uma interface de usuário completa utilizando essa tecnologia.'
+		descriptionPortuguese: 'Syntactically Awesome Style Sheets é uma linguagem de folha de estilo que estende o CSS, dando a ele super poderes. Permite que o desenvolvedor escreva CSS com uma sintaxe mais limpa e use variáveis, funções, loops, condicionais e entre outros. Eu possuo a capacidade de criar uma interface de usuário completa utilizando essa tecnologia.'
 	},
 	{
 		name: 'Styled Components',
