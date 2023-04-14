@@ -59,8 +59,8 @@ export const Home = () => {
 							/>
 						</h1>
 					</div>
-					<div className="lg:grid grid-cols-12 items-center w-full flex flex-col gap-8">
-						<p className="md:text-lg col-span-6 leading-8">
+					<div className="lg:grid grid-cols-12 items-center w-full flex flex-col gap-24 lg:gap-8">
+						<p className="md:text-2xl col-span-6 leading-8">
 							{language === 'es' ? textsEnglish.pages.home.description : textsPortuguese.pages.home.description}
 						</p>
 
