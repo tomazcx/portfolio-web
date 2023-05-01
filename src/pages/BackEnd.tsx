@@ -25,7 +25,7 @@ export const BackEnd = () => {
 	const [selected, setSelected] = useState<number | null>(null)
 	const [hoverTec, setHoverTec] = useState('') //default when no technology is selected	
 	const [projectsToShow, setProjects] = useState<IProject[]>([])
-	const {language} = useLanguage('es')
+	const {language} = useLanguage('pt-br')
 	const {getProjectsByTag} = useProjects()
 
 	const handleClick = async (tag: string, index: number) => {

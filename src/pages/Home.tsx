@@ -9,7 +9,7 @@ import {motion as m} from "framer-motion";
 export const Home = () => {
 
 	const [mouseYPos, setMousePos] = useState(0);
-	const {language} = useLanguage('es')
+	const {language} = useLanguage('pt-br')
 
 	useEffect(() => {
 		const handleMouseMove = (event: MouseEvent) => {

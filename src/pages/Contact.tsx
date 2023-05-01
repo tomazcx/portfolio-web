@@ -20,7 +20,7 @@ interface FormValues {
 
 export const Contact = () => {
 
-	const {language} = useLanguage('es')
+	const {language} = useLanguage('pt-br')
 	const [error, setError] = useState('')
 	const [formData, setFormData] = useState<FormValues>({
 		name: '',

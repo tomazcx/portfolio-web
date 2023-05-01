@@ -9,7 +9,7 @@ export const useLanguage = (initial: string) => {
 			if (saved) {
 				return saved
 			}
-			return 'es'
+			return 'pt-br'
 		}
 
 		return initial

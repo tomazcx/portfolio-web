@@ -24,7 +24,7 @@ export const Others = () => {
 
 	const [selected, setSelected] = useState<number | null>(null)
 	const [hoverTec, setHoverTec] = useState('') //default when no technology is selected	
-	const {language} = useLanguage('es')
+	const {language} = useLanguage('pt-br')
 	const [projectsToShow, setProjects] = useState<IProject[]>([])
 	const {getProjectsByTag} = useProjects()
 
