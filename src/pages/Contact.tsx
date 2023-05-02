@@ -69,8 +69,7 @@ export const Contact = () => {
 					<SocialMedia logo={<GithubLogo size={48} />} text="Github" href="https://github.com/tomazcx" target={'_blank'} />
 				</div>
 				<div className="flex gap-6 lg:hidden items-center justify-center">
-					<SocialMedia logo={<InstagramLogo size={36} />} text="Instagram" href="https://instagram.com/tomazcx" target={'_blank'} />
-					<SocialMedia logo={<TwitterLogo size={36} />} text="Twitter" href="https://twitter.com/tomazcx" target={'_blank'} />
+					<SocialMedia logo={<InstagramLogo size={36} />} text="Instagram" href="https://instagram.com/mais.dev" target={'_blank'} />
 					<SocialMedia logo={<LinkedinLogo size={36} />} text="Linkedin" href="https://linkedin.com/in/tomazcx/" target={'_blank'} />
 					<SocialMedia logo={<GithubLogo size={36} />} text="Github" href="https://github.com/tomazcx" target={'_blank'} />
 				</div>
